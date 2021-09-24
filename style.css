@@ -1,0 +1,25 @@
+h3{
+    color:burlywood;
+}
+textarea{
+    display: block;
+}
+
+.container{ 
+    width: 1140px;
+    margin: 0 auto;
+}
+.content{
+    background-color: palegoldenrod;
+    width: 75%;
+    float: left;
+}
+.avatar{
+    width: 25%;
+    background-color: greenyellow;
+    float: left;
+}
+.info{
+    background-color: aquamarine;
+
+}
