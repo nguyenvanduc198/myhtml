@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5-4 CodeStar</title>
+    <script>
+        function onClickInstruction(){
+            console.log("a");
+            window.alert("You clicked Instruction");
+        }
+
+        function calculateResult(){
+            const firstInput = document.getElementsByName("first-number")[0].value;
+            const secondInput = document.getElementsByName("second-number")[0].value;
+
+            const firstNumber = Number.parseInt(firstInput);
+            const secondNumber = Number.parseInt(secondInput);
+
+            if (Number.isInteger(firstNumber) && Number.isInteger(secondNumber)) {
+                const sum = firstNumber + secondNumber;
+                window.alert(`Result is: ${sum}`);
+                document.getElementsByClassName("result")[0].innerHTML = `Result is: ${sum}`;
+                return
+            }
+
+            window.alert(`Input is not correct. Please input a number `);
+            document.getElementsByClassName("result")[0].innerHTML = `Cannot get result`;
+        }
+    </script>
+</head>
+<body>
+    <div id="instruction" onclick="onClickInstruction()">
+        <h1>This is Lesson 5-4</h1>
+    </div>
+
+    <div class="calculate-box">
+        <p>Please input the first number:</p>
+        <input type="text" placeholder="First number" name="first-number">
+        <p>Please input the second number:</p>
+        <input type="text" placeholder="Second number" name="second-number">
+        <input type="button" value="Calculate" onclick="calculateResult()">
+        <div class="result"></div>
+            
+        </div>
+    
+</body>
+</html>
